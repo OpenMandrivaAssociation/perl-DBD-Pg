@@ -14,6 +14,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires:	postgresql-devel
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 PostgreSQL database driver for the DBI module
