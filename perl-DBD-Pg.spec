@@ -14,7 +14,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires:	postgresql-devel
-Buildrequires:	rpath
+Buildrequires:	chrpath
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
