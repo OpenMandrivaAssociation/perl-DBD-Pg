@@ -14,6 +14,7 @@ Url:		http://search.cpan.org/dist/%{module}/
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires:	postgresql-devel
+Buildrequires:	rpath
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
@@ -35,6 +36,7 @@ export POSTGRES_LIB=%{_libdir}
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+chrpath -d %{buildroot}%{perl_vendorarch}/auto/DBD/Pg/Pg.so
 
 %clean
 rm -rf %{buildroot}
