@@ -1,6 +1,6 @@
 %define	module	DBD-Pg
 %define	name	perl-%{module}
-%define	version	2.5.1
+%define	version	2.6.0
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -46,6 +46,7 @@ rm -rf %{buildroot}
 %doc README Changes
 %{perl_vendorarch}/auto/DBD
 %{perl_vendorarch}/DBD
+%{perl_vendorarch}/Bundle
 %{_mandir}/*/*
 
 
