@@ -1,6 +1,6 @@
 %define	module	DBD-Pg
 %define	name	perl-%{module}
-%define	version	2.7.2
+%define	version	2.8.0
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -22,7 +22,6 @@ PostgreSQL database driver for the DBI module
 
 %prep
 %setup -q -n %{module}-%{version}
-rm -f t/00-signature.t
 
 %build
 export POSTGRES_INCLUDE=/usr/include/pgsql
@@ -36,6 +35,7 @@ export POSTGRES_LIB=%{_libdir}
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+chmod 755 %{buildroot}%{perl_vendorarch}/auto/DBD/Pg/Pg.so
 chrpath -d %{buildroot}%{perl_vendorarch}/auto/DBD/Pg/Pg.so
 
 %clean
