@@ -1,6 +1,6 @@
 %define	module	DBD-Pg
 %define	name	perl-%{module}
-%define	version	2.8.1
+%define	version	2.8.2
 %define	release	%mkrel 1
 
 Name:		%{name}
@@ -24,7 +24,7 @@ PostgreSQL database driver for the DBI module
 %setup -q -n %{module}-%{version}
 
 %build
-export POSTGRES_INCLUDE=/usr/include/pgsql
+export POSTGRES_INCLUDE=/usr/include
 export POSTGRES_LIB=%{_libdir}
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make CFLAGS="%{optflags}"
