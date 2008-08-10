@@ -1,6 +1,6 @@
 %define	module	DBD-Pg
 %define	name	perl-%{module}
-%define	version	2.8.7
+%define	version	2.9.0
 %define	release	%mkrel 1
 
 Name:		%{name}
