@@ -1,7 +1,9 @@
 %define	module	DBD-Pg
 %define	name	perl-%{module}
-%define	version	2.11.8
+%define	version	2.13.1
 %define	release	%mkrel 1
+
+%define Werror_cflags %nil
 
 Name:		%{name}
 Version:	%{version}
@@ -9,8 +11,8 @@ Release:	%{release}
 Summary:	PostgreSQL database driver for the DBI module
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/DBD/%{module}-%{version}.tar.gz
 Url:		http://search.cpan.org/dist/%{module}/
+Source:		http://www.cpan.org/modules/by-module/DBD/%{module}-%{version}.tar.gz
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires:	postgresql-devel
@@ -27,7 +29,7 @@ PostgreSQL database driver for the DBI module
 export POSTGRES_INCLUDE=/usr/include
 export POSTGRES_LIB=%{_libdir}
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make CFLAGS="%{optflags}"
+%make OPTIMIZE="%{optflags}"
 
 %check
 %{__make} test
