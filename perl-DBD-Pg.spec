@@ -1,29 +1,29 @@
-%define	module	DBD-Pg
-%define	name	perl-%{module}
-%define	version	2.13.1
-%define	release	%mkrel 1
+%define	upstream_name	 DBD-Pg
+%define	upstream_version 2.15.0
 
 %define Werror_cflags %nil
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	PostgreSQL database driver for the DBI module
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}/
-Source:		http://www.cpan.org/modules/by-module/DBD/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}/
+Source0:	http://www.cpan.org/modules/by-module/DBD/%{upstream_name}-%{upstream_version}.tar.gz
+
+Buildrequires:	chrpath
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires:	postgresql-devel
-Buildrequires:	chrpath
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 PostgreSQL database driver for the DBI module
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 export POSTGRES_INCLUDE=/usr/include
@@ -50,5 +50,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/DBD
 %{perl_vendorarch}/Bundle
 %{_mandir}/*/*
-
-
