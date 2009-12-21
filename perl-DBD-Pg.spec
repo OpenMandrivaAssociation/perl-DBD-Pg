@@ -1,11 +1,11 @@
 %define	upstream_name	 DBD-Pg
-%define	upstream_version 2.15.1
+%define upstream_version 2.16.0
 
 %define Werror_cflags %nil
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:	PostgreSQL database driver for the DBI module
 License:	GPL+ or Artistic
