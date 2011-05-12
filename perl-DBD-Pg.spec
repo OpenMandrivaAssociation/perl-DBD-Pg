@@ -1,5 +1,5 @@
 %define	upstream_name	 DBD-Pg
-%define upstream_version 2.18.0
+%define upstream_version 2.18.1
 
 %define Werror_cflags %nil
 
