@@ -10,7 +10,6 @@ License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
 Source0:	http://www.cpan.org/modules/by-module/DBD/%{module}-%{upstream_version}.tar.gz
-Buildrequires:	chrpath
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires	postgresql-devel
@@ -32,11 +31,8 @@ make test
 
 %install
 %makeinstall_std
-chmod 755 %{buildroot}%{perl_vendorarch}/auto/DBD/Pg/Pg.so
-chrpath -d %{buildroot}%{perl_vendorarch}/auto/DBD/Pg/Pg.so
 
 %files
-%defattr(-,root,root)
 %{perl_vendorarch}/auto/DBD
 %{perl_vendorarch}/DBD
 %{perl_vendorarch}/Bundle
