@@ -1,15 +1,15 @@
 %define	module	DBD-Pg
-%define	upstream_version 2.19.2
+%define upstream_version 3.0.0
 
 Name:		perl-%{module}
 Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Release:	1
 
 Summary:	PostgreSQL database driver for the DBI module
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
-Source0:	http://www.cpan.org/modules/by-module/DBD/%{module}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/DBD/DBD-Pg-%{version}.tar.gz
 Buildrequires:	perl(DBI)
 Buildrequires:	perl-devel
 Buildrequires:	postgresql-devel
@@ -37,4 +37,5 @@ make test
 %{perl_vendorarch}/DBD
 %{perl_vendorarch}/Bundle
 %{_mandir}/*/*
+
 
