@@ -7,6 +7,7 @@ Release:	1
 
 Summary:	PostgreSQL database driver for the DBI module
 
+
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{module}/
@@ -38,6 +39,7 @@ make test
 %{perl_vendorarch}/DBD
 %{perl_vendorarch}/Bundle
 %{_mandir}/*/*
+
 
 
 
