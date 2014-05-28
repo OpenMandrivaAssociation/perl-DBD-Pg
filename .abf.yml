@@ -2,5 +2,6 @@ removed_sources:
   DBD-Pg-2.19.2.tar.gz: edcaa1a44c0ff8e7f78bc80f584b9e83c11d10df
   DBD-Pg-3.0.0.tar.gz: 03ded628d453718cbceaea906da3412df5a7137a
   DBD-Pg-3.1.1.tar.gz: 4be84f9a384ff589286a1a0de839e35a8643e42a
-sources:
   DBD-Pg-3.2.0.tar.gz: 036e51f116ff4f26bc7bfeb4e52d4b39d5452812
+sources:
+  DBD-Pg-3.2.1.tar.gz: ddcef35e7431742258a415069c9f1c2d303c0446
