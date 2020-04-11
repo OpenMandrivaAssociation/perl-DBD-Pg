@@ -1,15 +1,10 @@
 %define	module	DBD-Pg
-%define upstream_version 3.9.1
+%define upstream_version 3.10.5
 
 Name:		perl-%{module}
 Version:	%perl_convert_version %{upstream_version}
 Release:	1
-
 Summary:	PostgreSQL database driver for the DBI module
-
-
-
-
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
@@ -39,10 +34,3 @@ perl Makefile.PL INSTALLDIRS=vendor
 %{perl_vendorarch}/DBD
 %{perl_vendorarch}/Bundle
 %{_mandir}/*/*
-
-
-
-
-
-
-
