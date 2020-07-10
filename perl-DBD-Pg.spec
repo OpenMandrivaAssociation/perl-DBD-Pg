@@ -1,5 +1,5 @@
 %define	module	DBD-Pg
-%define upstream_version 3.10.5
+%define upstream_version 3.13.0
 
 Name:		perl-%{module}
 Version:	%perl_convert_version %{upstream_version}
